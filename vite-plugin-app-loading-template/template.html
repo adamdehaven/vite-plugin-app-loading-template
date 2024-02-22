@@ -1,0 +1,25 @@
+<template>
+  <div id="app-loading-template" style="display: none">
+    <style id="app-loading-template-styles"></style>
+    <div class="app-loading-template-layout">
+      <!-- Navbar -->
+      <header />
+      <!-- Sidebar -->
+      <aside />
+      <!-- Main content -->
+      <main />
+    </div>
+    <script type="text/javascript">
+      // Remove the loading class from the html root element
+      const htmlRoot = document.documentElement
+      if (htmlRoot) {
+        htmlRoot.classList.add('app-layout-html', 'app-loading')
+      }
+
+      // Do any other processing, layout changes, injecting content from localStorage, etc.
+
+      // Done processing the template; make it visible
+      document.getElementById('app-loading-template').style.display = 'block'
+    </script>
+  </div>
+</template>
